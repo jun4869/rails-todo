@@ -1,0 +1,15 @@
+<h1>Todo<h1>
+<table>
+  <thead>
+    <tr>
+      <th>タスク</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
