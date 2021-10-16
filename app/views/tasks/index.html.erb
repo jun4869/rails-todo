@@ -8,7 +8,7 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= check_box_tag ' ', true, false, {}%></td>
+        <td><%= check_box_tag '', '' %></td>
         <td><%= task.title %></td>
         <td><%= link_to '[編集]', edit_task_path(task) %></td>
         <td><%= link_to '[削除]', task_path(task), method: :delete, data:{ confirm: '削除してもよろしいですか？'} %></td>
@@ -17,3 +17,4 @@
   </tbody>
 </table>
 <%= link_to '追加', new_task_path %>
+
