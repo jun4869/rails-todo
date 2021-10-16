@@ -2,6 +2,9 @@
 <%= form_with model: @task do |f| %>
   <div><%= f.label :title %></div>
   <div><%= f.text_field :title %></div>
+  <% if @task.errors.any? %>
+    <%= @task.errors.messages[:title][0] %>
+  <% end %>
   <div><%= f.submit '登録' %></div>
 <% end %>
 <%= link_to '戻る', tasks_path %>
